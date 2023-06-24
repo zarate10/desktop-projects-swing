@@ -13,13 +13,13 @@ public class TableModel extends AbstractTableModel {
     protected String[] columnNames = new String[] { "Doc. Resp.", "F. Salida", "F. Llegada", "N° Hab.", "Precio" };
     protected Class[] columnClasses = new Class[] { int.class, Date.class, Date.class, int.class, double.class };
 
-    public String getColumnName(int col) { return columnNames[col]; }
-    public Class getColumnClass(int col) { return columnClasses[col]; }
-
     public TableModel(List<ReservaDTO> datos)
     {
         this.datos = datos;
     }
+
+    public String getColumnName(int col) { return columnNames[col]; }
+    public Class getColumnClass(int col) { return columnClasses[col]; }
 
     public int getColumnCount() {
         return columnNames.length;
@@ -45,7 +45,12 @@ public class TableModel extends AbstractTableModel {
         }
     }
 
+    public void setDatos(List<ReservaDTO> datos) {
+        this.datos = datos;
+    }
+
     public void refresh() {
+
         fireTableDataChanged();
     }
 }

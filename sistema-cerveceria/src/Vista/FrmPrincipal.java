@@ -1,0 +1,18 @@
+package Vista;
+
+import javax.swing.*;
+
+public class FrmPrincipal extends JFrame {
+    private JPanel pnlPrincipal;
+    private JDesktopPane desktopPane;
+
+    public FrmPrincipal(){
+        desktopPane.add(new FrmFormPrincipal(desktopPane));
+        this.setContentPane(pnlPrincipal);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setTitle("CERVECERÍA");
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+        this.setSize(500,500);
+    }
+}

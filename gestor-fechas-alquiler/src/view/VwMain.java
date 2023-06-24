@@ -25,6 +25,7 @@ public class VwMain extends JFrame {
     private JComboBox comboDescuento;
 
     private ReservaController rc = ReservaController.getInstance();
+    private TableModel tm = new TableModel(rc.getReservasDTO());
 
     private VwMain()
     {
@@ -35,7 +36,7 @@ public class VwMain extends JFrame {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
-        actualizarTabla();
+        table1.setModel(tm);
         cargarEventos();
     }
 
@@ -78,6 +79,7 @@ public class VwMain extends JFrame {
 
     void actualizarTabla()
     {
-        table1.setModel(new TableModel(ReservaController.getInstance().getReservasDTO()));
+        tm.setDatos(rc.getReservasDTO());
+        tm.fireTableDataChanged();
     }
 }
