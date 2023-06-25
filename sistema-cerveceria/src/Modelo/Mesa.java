@@ -1,5 +1,7 @@
 package Modelo;
 
+import DTO.MesaDTO;
+
 public class Mesa {
 
     // ID
@@ -18,5 +20,13 @@ public class Mesa {
 
     public int getMesaID() {
         return mesaID;
+    }
+
+    public MesaDTO toDTO()
+    {
+        MesaDTO dto = new MesaDTO();
+        dto.descripcion = descripcion;
+        dto.mesaID = mesaID;
+        return dto;
     }
 }

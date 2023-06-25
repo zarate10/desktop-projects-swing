@@ -1,5 +1,6 @@
 package Controlador;
 
+import DTO.MesaDTO;
 import DTO.PresentacionDTO;
 import DTO.TarjetaDTO;
 import DTO.VariedadDTO;
@@ -144,4 +145,15 @@ public class ParametrosController {
         }
         return arr;
     }
+
+    public List<MesaDTO> getMesasDTO()
+    {
+        List<MesaDTO> arr = new ArrayList<>();
+        for(Mesa obj: mesas)
+        {
+            arr.add(obj.toDTO());
+        }
+        return arr;
+    }
+
 }

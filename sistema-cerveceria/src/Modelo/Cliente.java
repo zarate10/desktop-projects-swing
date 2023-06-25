@@ -28,8 +28,4 @@ public class Cliente {
         this.tarjeta = tarjeta;
     }
 
-    // PREGUNTARpor el getDEscuento y el metodo de abajo
-    public void soyCliente(int id){
-        //preguntar que va aca adentro
-    }
 }

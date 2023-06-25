@@ -13,12 +13,4 @@ public class HorarioVO {
         this.horario = horario;
     }
 
-    // Metodos
-    public void isValid(){
-        //preguntar que va aca adentro
-    }
-
-    public void isHappyHour(){
-        //preguntar que va aca adentro
-    }
 }

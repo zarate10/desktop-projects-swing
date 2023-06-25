@@ -4,7 +4,8 @@ import Controlador.ParametrosController;
 import Vista.tables.TarjetasTableModel;
 
 import javax.swing.*;
-import javax.swing.table.TableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class FrmTarjetas extends JInternalFrame {
     private JPanel panel1;
@@ -22,6 +23,23 @@ public class FrmTarjetas extends JInternalFrame {
         this.setVisible(true);
         this.setContentPane(panel1);
         PC = ParametrosController.getInstance();
+
+        cargarTabla();
+        loadEvents();
+    }
+
+    private void cargarTabla()
+    {
         table1.setModel(new TarjetasTableModel(PC.getTarjetasDTO()));
+    }
+
+    private void loadEvents()
+    {
+        agregarButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                PC.crearTarjetas(txtNombreTarjeta.getText(), Float.parseFloat(txtDescuentoTarjeta.getText()));
+                cargarTabla();
+            }
+        });
     }
 }

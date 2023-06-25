@@ -17,9 +17,4 @@ public class Venta {
         this.fchVenta = fchVenta;
         cantidadVentas++;
     }
-
-    // Metodos
-
-    // preguntar como hacer aca
-
 }

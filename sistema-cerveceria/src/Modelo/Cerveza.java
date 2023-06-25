@@ -12,7 +12,4 @@ public class Cerveza {
         this.unaPresentacion = unaPresentacion;
     }
 
-    //Metodos
-
-    // preguntar que hacer aca
 }

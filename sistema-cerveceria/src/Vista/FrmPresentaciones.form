@@ -34,7 +34,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <text value="CC"/>
                     </properties>
                   </component>
                   <component id="fe6af" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
@@ -68,7 +68,7 @@
                       <text value="Descripción"/>
                     </properties>
                   </component>
-                  <component id="1b636" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+                  <component id="1b636" class="javax.swing.JTextField" binding="txtDescripcion">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -96,7 +96,7 @@
                   <text value="Descuento"/>
                 </properties>
               </component>
-              <component id="67e99" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+              <component id="67e99" class="javax.swing.JTextField" binding="txtDescuento">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -122,7 +122,7 @@
                   <text value="Descuento HH"/>
                 </properties>
               </component>
-              <component id="ae154" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+              <component id="ae154" class="javax.swing.JTextField" binding="txtDescuentoHH">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
