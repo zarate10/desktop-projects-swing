@@ -1,5 +1,8 @@
 package Controlador;
 
+import DTO.PresentacionDTO;
+import DTO.TarjetaDTO;
+import DTO.VariedadDTO;
 import Modelo.*;
 
 import java.util.ArrayList;
@@ -62,11 +65,13 @@ public class ParametrosController {
         tarjetas.add(new Tarjeta(tt, descuento));
     }
 
-    public void crearVariedades(String descripcion, float precioPorLitro, String tc){
+    public void crearVariedades(String descripcion, float precioPorLitro, String tc)
+    {
         variedades.add(new Variedad(descripcion,precioPorLitro,tc));
     }
 
-    public void crearPresentaciones(String descripcion, int cantidadCC, float descuentoHH, float descuentoGeneral){
+    public void crearPresentaciones(String descripcion, int cantidadCC, float descuentoHH, float descuentoGeneral)
+    {
         presentaciones.add(new Presentacion(descripcion, cantidadCC, descuentoHH, descuentoGeneral));
     }
 
@@ -74,7 +79,8 @@ public class ParametrosController {
         mesas.add(new Mesa(descripcion));
     }
 
-    public Tarjeta getTarjetaByID(String tarjeta){
+    public Tarjeta getTarjetaByID(String tarjeta)
+    {
         for (Tarjeta t: tarjetas)
         {
             if (t.getTipoTarjeta().equals(tarjeta))
@@ -85,7 +91,8 @@ public class ParametrosController {
         return null;
     }
 
-    public Variedad getVariedadByID(int id){
+    public Variedad getVariedadByID(int id)
+    {
         for (Variedad v: variedades)
         {
             if (v.getVariedadID() == id)
@@ -96,7 +103,8 @@ public class ParametrosController {
         return null;
     }
 
-    public Presentacion getPresentacionByID(int id){
+    public Presentacion getPresentacionByID(int id)
+    {
         for (Presentacion p: presentaciones)
         {
             if (p.getPresentacionID() == id)
@@ -107,5 +115,33 @@ public class ParametrosController {
         return null;
     }
 
+    public List<VariedadDTO> getVariedadesDTO()
+    {
+        List<VariedadDTO> arr = new ArrayList<>();
+        for(Variedad obj: variedades)
+        {
+            arr.add(obj.toDTO());
+        }
+        return arr;
+    }
 
+    public List<TarjetaDTO> getTarjetasDTO()
+    {
+        List<TarjetaDTO> arr = new ArrayList<>();
+        for(Tarjeta obj: tarjetas)
+        {
+            arr.add(obj.toDTO());
+        }
+        return arr;
+    }
+
+    public List<PresentacionDTO> getPresentacionesDTO()
+    {
+        List<PresentacionDTO> arr = new ArrayList<>();
+        for(Presentacion obj: presentaciones)
+        {
+            arr.add(obj.toDTO());
+        }
+        return arr;
+    }
 }

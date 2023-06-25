@@ -1,5 +1,7 @@
 package Modelo;
 
+import DTO.TarjetaDTO;
+
 public class Tarjeta {
 
     // Atributos de la clase
@@ -19,5 +21,13 @@ public class Tarjeta {
     }
     public float getDescuento() {
         return descuento;
+    }
+
+    public TarjetaDTO toDTO()
+    {
+        TarjetaDTO dto = new TarjetaDTO();
+        dto.descuento = descuento;
+        dto.tipoTarjeta = tipoTarjeta;
+        return dto;
     }
 }

@@ -1,6 +1,5 @@
 /*
 * Sistema Gestión de Cervecería
-*
 */
 
 import Vista.FrmPrincipal;

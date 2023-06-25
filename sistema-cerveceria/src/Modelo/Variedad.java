@@ -1,5 +1,7 @@
 package Modelo;
 
+import DTO.VariedadDTO;
+
 public class Variedad {
     // ID
     static int cantidadVariedades = 0;
@@ -32,5 +34,15 @@ public class Variedad {
 
     public float getPrecioPorLitro() {
         return precioPorLitro;
+    }
+
+    public VariedadDTO toDTO()
+    {
+        VariedadDTO dto = new VariedadDTO();
+        dto.tipo = tipoCerveza;
+        dto.precioLt = precioPorLitro;
+        dto.ID = variedadID;
+        dto.descripcion = descripcion;
+        return dto;
     }
 }

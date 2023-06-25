@@ -60,5 +60,11 @@ public class FrmGestionarSistema extends JInternalFrame {
                 changeDesktopPane(desktopPaneCliente, new FrmPresentaciones());
             }
         });
+
+        mesasButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                changeDesktopPane(desktopPaneCliente, new FrmMesas());
+            }
+        });
     }
 }
