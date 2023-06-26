@@ -2,7 +2,6 @@ package Modelo;
 
 import java.util.Date;
 
-import Modelo.Mesa;
 public class Venta {
     // ID
     static int cantidadVentas = 0;

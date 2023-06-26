@@ -1,7 +1,6 @@
 package Vista.tables;
 
 import DTO.MesaDTO;
-import DTO.PresentacionDTO;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.List;

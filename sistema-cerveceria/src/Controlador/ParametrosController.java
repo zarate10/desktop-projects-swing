@@ -18,6 +18,7 @@ public class ParametrosController {
     private static ParametrosController instance;
 
     // atributos generales
+    private VentasController VC;
     private List<Tarjeta> tarjetas;
     private List<Variedad> variedades;
     private List<Presentacion> presentaciones;
@@ -34,6 +35,7 @@ public class ParametrosController {
         variedades = new ArrayList<Variedad>();
         presentaciones = new ArrayList<Presentacion>();
         mesas = new ArrayList<Mesa>();
+        VC = VentasController.getInstance();
 
         crearTarjetas("Gold", 25);
         crearTarjetas("Silver", 15);
@@ -51,6 +53,7 @@ public class ParametrosController {
         crearMesas("Prueba mesa0");
         crearMesas("Prueba mesa1");
         crearMesas("Prueba mesa2");
+        System.out.println("cargando parametros contorller");
     }
 
     // métodos generales
@@ -78,6 +81,7 @@ public class ParametrosController {
 
     public void crearMesas(String descripcion){
         mesas.add(new Mesa(descripcion));
+        VC.setMesas(mesas.get(mesas.size() - 1).toDTO());
     }
 
     public Tarjeta getTarjetaByID(String tarjeta)
@@ -155,5 +159,4 @@ public class ParametrosController {
         }
         return arr;
     }
-
 }

@@ -31,5 +31,14 @@ public class FrmFormPrincipal extends JInternalFrame {
                 desktopPane.repaint();
             }
         });
+
+        ventasButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                desktopPane.remove(0);
+                desktopPane.add(new FrmVentasGeneral(desktopPane));
+                desktopPane.revalidate();
+                desktopPane.repaint();
+            }
+        });
     }
 }

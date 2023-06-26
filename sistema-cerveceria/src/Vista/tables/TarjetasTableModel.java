@@ -1,7 +1,6 @@
 package Vista.tables;
 
 import DTO.TarjetaDTO;
-import DTO.VariedadDTO;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.List;

@@ -11,8 +11,8 @@ public class FrmPrincipal extends JFrame {
         this.setContentPane(pnlPrincipal);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setTitle("CERVECERÍA");
-        this.setLocationRelativeTo(null);
         this.setVisible(true);
-        this.setSize(500,500);
+        this.setSize(800,600);
+        this.setLocationRelativeTo(null);
     }
 }
